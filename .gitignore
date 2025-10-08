@@ -1,0 +1,97 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Next.js
+.next/
+out/
+.next-static/
+.next-turbo/
+.next-cache/
+
+# Build artifacts
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Logs
+logs/
+*.log
+*.log.*
+lerna-debug.log
+
+# Images/cache
+public/**/*.orig
+*.orig
+*.tmp
+tmp/
+temp/
+
+# TypeScript
+*.d.ts.map
+
+# Testing
+.junit/
+coverage/
+.cypress/
+playwright-report/
+test-results/
+.vitest/
+*.snap
+
+# Storybook
+.storybook-out/
+storybook-static/
+
+# Sentry/Next telemetry
+.next/trace
+.next/trace*
+.next/telemetry
+
+# Docker
+docker-data/
+*.pid
+
+# Prisma (if used)
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/.cache
+
+# Turbo/Monorepo (optional)
+.turbo/
+turbo/*
+!.turbo/config.json
+
+# VSCode rest files (keep recommended configs above)
+.vscode/*.code-workspace
+
+# Lockfiles (optional rule if you centrally manage with pnpm/yarn)
+# Uncomment one of these if you want to keep a single lockfile policy
+# !pnpm-lock.yaml
+# !yarn.lock
+# !package-lock.json

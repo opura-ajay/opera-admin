@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
+import Sidebar from "./frontend/components/layout/Sidebar";
+import { ThemeProvider } from "./frontend/components/ui/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light" >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class" // This tells next-themes to add the 'dark' class to the html element
+          defaultTheme="system" // Default to system preference, or "light"/"dark"
+          enableSystem // Allow switching to system theme
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

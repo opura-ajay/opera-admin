@@ -41,7 +41,7 @@ const SLIDES: Slide[] = [
   },
 ]
 
-export default function LoginForm() {
+export default function SignInForm() {
   const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -86,7 +86,7 @@ export default function LoginForm() {
       await new Promise((r) => setTimeout(r, 900))
       if (email === "admin@opura.ai" && password === "password") {
         localStorage.setItem("isAuthenticated", "true")
-        router.push("/dashboard")
+        router.push("/admin-config")
       } else {
         setError("Invalid email or password")
       }
@@ -100,14 +100,14 @@ export default function LoginForm() {
   return (
     <div className="min-h-screen bg-[radial-gradient(80%_60%_at_50%_-10%,#eef2ff_0%,#ffffff_45%)]">
       {/* top accent line */}
-      <div className="h-1 bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400" />
+      {/* <div className="h-1 bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400" /> */}
 
       <div className="mx-auto grid min-h-[calc(100vh-4px)] max-w-6xl grid-cols-1 gap-8 p-4 md:grid-cols-2 md:items-center">
         {/* Left: Auth Card */}
         <div className="order-2 md:order-1 relative">
           {/* Absolute brand row (no longer changes layout height) */}
-          <div className="pointer-events-none absolute -top-18 left-0 flex items-center gap-3">
-            <div className="relative h-15 w-15 overflow-hidden rounded-lg ring-1 ring-slate-200 bg-white">
+          <div className="pointer-events-none absolute -top-16 left-0 flex items-center gap-1">
+            <div className="relative h-15 w-15 overflow-hidden rounded-lg ring-slate-200 bg-white">
               <Image
                 src="/icons/opura-logo.png"
                 alt="Logo"

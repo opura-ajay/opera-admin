@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Footer from "../components/layout/Footer"
 import Header from "../components/layout/Header"
+import NewFooter from "../components/layout/NewFooter"
 
 
 export default function AppShellLayout({
@@ -38,7 +38,7 @@ export default function AppShellLayout({
         <main className="flex-1">
           <Header />
           {children}
-          <Footer />
+          <NewFooter />
         </main>
       </div>
 
